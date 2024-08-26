@@ -53,7 +53,8 @@ async function processImage() {
         const base64Image = reader.result.split(',')[1];
 
         try {
-            const response = await fetch('https://vision.googleapis.com/v1/images:annotate?key=API_KEY', {
+            const response = await fetch('https://vision.googleapis.com/v1/images:annotate?key=API_KEY', // add your own google cloud api
+                                         { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
