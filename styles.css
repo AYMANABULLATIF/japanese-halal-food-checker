@@ -1,0 +1,357 @@
+/* Enhanced body styling */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 20px;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Modern container design */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Modern heading styling */
+h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    width: 120px;
+    height: 5px;
+    background-color: #3498db;
+    display: block;
+    margin: 1rem auto 0;
+    border-radius: 5px;
+}
+
+/* Enhanced button styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+#checkButton {
+    margin-top: 15px; /* Add some space between the buttons */
+    background-color: #e67e22;
+}
+
+#checkButton:hover {
+    background-color: #d35400;
+}
+
+
+#takePictureButton {
+    background: linear-gradient(145deg, #2ecc71, #27ae60);
+}
+
+#takePictureButton:hover {
+    background: linear-gradient(145deg, #27ae60, #2ecc71);
+}
+
+#checkButton {
+    background: linear-gradient(145deg, #e67e22, #d35400);
+}
+
+#checkButton:hover {
+    background: linear-gradient(145deg, #d35400, #e67e22);
+}
+
+/* Modern canvas styling */
+canvas {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#imageContainer.show canvas {
+    transform: scale(1.02);
+}
+
+/* Animated results with shadows */
+.results {
+    margin-top: 25px;
+    text-align: left;
+    padding: 15px;
+}
+
+.results p {
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.results p:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.results p:nth-child(even) {
+    animation-delay: 0.4s;
+}
+.results .halal {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.results .haram {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.results .questionable {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+
+/* Slide-in animation for results */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced tooltip styling */
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px; /* Adjust width as needed */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+    margin-left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Adjust the positioning if it's too high or out of the frame */
+.tooltip .tooltiptext.adjusted {
+    bottom: 100%; /* Move the tooltip closer to the element */
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Position the arrow at the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Improved fade-in for image container */
+#imageContainer {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#imageContainer.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Spinner animation improvement */
+#spinner svg {
+    animation: rotate 1.2s linear infinite;
+}
+/* Modal styling */
+.modal {
+    pointer-events: none;
+}
+
+.modal-content {
+    pointer-events: auto; /* Enable pointer events only for the content */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    transform: none;
+    opacity: 1;
+    transition: none; /* No transitions or animations */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: #333;
+}
+
+
+
+
+/* Slide down animation for modal */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Notification banner */
+.notification {
+    visibility: hidden;
+    min-width: 300px;
+    background-color: #44c767;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 30px;
+    transform: translateX(-50%);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: visibility 0.6s, opacity 0.6s ease-in-out;
+    opacity: 0;
+}
+
+.notification.error {
+    background-color: #e74c3c;
+}
+
+.notification.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.notification.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+input[type="file"] {
+    display: none;
+}
+
+/* Button Styling */
+button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    color: white;
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 10px 0;
+    width: 240px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #2980b9, #3498db);
+    transform: translateY(-2px);
+}
+
+/* Info Content Styling */
+.hidden {
+    display: none;
+}
+
+.info-details {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.info-details.show {
+    display: block;
+    opacity: 1;
+    max-height: 500px; /* Arbitrary value high enough to fit the content */
+}
+
